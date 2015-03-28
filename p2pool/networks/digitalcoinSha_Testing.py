@@ -1,6 +1,6 @@
 from p2pool.bitcoin import networks
 
-PARENT = networks.nets['digitalcoinSha']
+PARENT = networks.nets['digitalcoinSha_Testing']
 SHARE_PERIOD = 10 # seconds target spacing
 CHAIN_LENGTH = 24*60*60//10 # shares
 REAL_CHAIN_LENGTH = 24*60*60//10 # shares
