@@ -20,9 +20,9 @@ from p2pool.util import pack
         BLOCK_PERIOD=30, # s
         SYMBOL='MYR',
         CONF_FILE_FUNC=lambda: os.path.join(os.path.join(os.environ['APPDATA'], 'Myriadcoin') if platform.system() == 'Windows' else os.path.expanuser('~/Library/Application Support/Myriadcoin/') if platform.system() == 'Darwin' else os.path.expanduser('~/.myriadcoin'), 'myriadcoin.conf'),
-        BLOCK_EXPLORER_URL_PREFIX='http://myr.theblockexplorer.com:2750/block/',
-        ADDRESS_EXPLORER_URL_PREFIX='http://myr.theblockexplorer.com:2750/address/',
-        TX_EXPLORER_URL_PREFIX='http://myr.theblockexplorer.com:2750/tx/',
+        BLOCK_EXPLORER_URL_PREFIX='http://insight-myr.cryptap.us/block/',
+        ADDRESS_EXPLORER_URL_PREFIX='http://insight-myr.cryptap.us/address/',
+        TX_EXPLORER_URL_PREFIX='http://insight-myr.cryptap.us/tx/',
 ### Neisklar: normally 2**24 should be 2**20 BUT the quark enabled minerd is coded so that it only detects hashes below 0x000000xxxxxxx
         ###           and 2*20 would be 0x00000FFFF, maybe changing that in the miner  would be a good idea for slower ones... 
                 ### Update:   the minerd is (at least in GitHub) updated so that it would also detect targets below 2**24 (0x000000xxxx..), (Quark$
