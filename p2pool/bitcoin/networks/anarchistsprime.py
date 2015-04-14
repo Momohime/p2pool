@@ -1,4 +1,4 @@
-mport os
+import os
 import platform
 
 from twisted.internet import defer
@@ -10,12 +10,12 @@ from p2pool.util import pack
 P2P_PREFIX = 'f9beb4d9'.decode('hex')
 P2P_PORT = 11050
 ADDRESS_VERSION = 0
-RPC_PORT = 9667
+RPC_PORT = 11051
 RPC_CHECK = defer.inlineCallbacks(lambda bitcoind: defer.returnValue(
-            'anarchistsprimecoinaddress' in (yield bitcoind.rpc_help()) and
+            'anarchistsprimeaddress' in (yield bitcoind.rpc_help()) and
             not (yield bitcoind.rpc_getinfo())['testnet']
         ))
-SUBSIDY_FUNC = lambda height: 50*100000000 >> (height + 1)//210000
+SUBSIDY_FUNC = lambda height: 32*53760000 >> (height + 1)//840000
 POW_FUNC = data.hash256
 BLOCK_PERIOD = 180 # s
 SYMBOL = 'APC'
