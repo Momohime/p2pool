@@ -10,7 +10,7 @@ from p2pool.util import pack
 P2P_PREFIX = 'f9beb4d9'.decode('hex')
 P2P_PORT = 11050
 ADDRESS_VERSION = 0
-RPC_PORT = 11051
+RPC_PORT = 21050
 RPC_CHECK = defer.inlineCallbacks(lambda bitcoind: defer.returnValue(
             'anarchistsprimeaddress' in (yield bitcoind.rpc_help()) and
             not (yield bitcoind.rpc_getinfo())['testnet']
