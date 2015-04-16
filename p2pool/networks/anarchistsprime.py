@@ -7,7 +7,7 @@ from p2pool.bitcoin import networks
 # changes can be done by changing one, then the other
 
 PARENT = networks.nets['anarchistsprime']
-SHARE_PERIOD = 5 # seconds
+SHARE_PERIOD = 10 # seconds
 CHAIN_LENGTH = 24*60*60//5 # shares
 REAL_CHAIN_LENGTH = 12*60*60//5 # shares
 TARGET_LOOKBEHIND = 200 # shares
