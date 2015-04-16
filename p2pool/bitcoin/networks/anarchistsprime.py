@@ -18,7 +18,7 @@ RPC_CHECK = defer.inlineCallbacks(lambda bitcoind: defer.returnValue(
 SUBSIDY_FUNC = lambda height: 32*53760000 >> (height + 1)//840000
 POW_FUNC = data.hash256
 BLOCK_PERIOD = 180 # s
-SYMBOL = 'APC'
+SYMBOL = 'ACP'
 CONF_FILE_FUNC = lambda: os.path.join(os.path.join(os.environ['APPDATA'], 'anarchistsprime') if platform.system() == 'Windows' else os.path.expanduser('~/Library/Application Support/AnarchistsPrime/') if platform.system() == 'Darwin' else os.path.expanduser('~/.anarchistsprime'), 'anarchistsprime.conf')
 BLOCK_EXPLORER_URL_PREFIX = 'http://acp.explorer.ssdpool.com:9150/block/'
 ADDRESS_EXPLORER_URL_PREFIX = 'http://acp.explorer.ssdpool.com:9150/address/'
