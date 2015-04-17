@@ -7,11 +7,11 @@ from p2pool.bitcoin import networks
 # changes can be done by changing one, then the other
 
 PARENT = networks.nets['anarchistsprime']
-SHARE_PERIOD = 10 # seconds
-CHAIN_LENGTH = 24*60*60//10 # shares
-REAL_CHAIN_LENGTH = 12*60*60//10 # shares
-TARGET_LOOKBEHIND = 60 # shares
-SPREAD = 30 # blocks
+SHARE_PERIOD = 30 # seconds
+CHAIN_LENGTH = 24*60*60//1 # server keeps 1 day of shares
+REAL_CHAIN_LENGTH = 12*60*60//4 # 3 Hour share chain
+TARGET_LOOKBEHIND = 30 # Difficulty adjusts every 10 minutes
+SPREAD = 20 # 1 hour payout adjustment at 3 minute blocks
 IDENTIFIER = 'fc70035c7a81666f'.decode('hex')
 PREFIX = '247666181efcd37b'.decode('hex')
 P2P_PORT = 11050
