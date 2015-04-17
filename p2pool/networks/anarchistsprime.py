@@ -19,6 +19,6 @@ MIN_TARGET = 0
 MAX_TARGET = 2**256//2**32 - 1
 PERSIST = False
 WORKER_PORT = 9666
-BOOTSTRAP_ADDRS = 'rav3n.dtdns.net pool.hostv.pl p2pool.org acp.explorer.ssdpool.com 52.16.23.106 52.17.116.144 178.62.102.181 173.16.173.143 104.155.18.57 128.199.111.217 109.88.89.62 58.7.251.128'.split(' ')
+BOOTSTRAP_ADDRS = 'rav3n.dtdns.net mining.p2pools.com pool.hostv.pl p2pool.org acp.explorer.ssdpool.com 52.16.23.106 52.17.116.144 178.62.102.181 173.16.173.143 104.155.18.57 128.199.111.217 109.88.89.62 58.7.251.128'.split(' ')
 ANNOUNCE_CHANNEL = '#p2pool-alt'
 VERSION_CHECK = lambda v: True
