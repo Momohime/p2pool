@@ -12,14 +12,14 @@ P2P_PORT = 25255
 ADDRESS_VERSION = 20
 RPC_PORT = 25256
 RPC_CHECK = defer.inlineCallbacks(lambda bitcoind: defer.returnValue(
-            'anarchistsprimeaddress' in (yield bitcoind.rpc_help()) and
+            '256coinaddress' in (yield bitcoind.rpc_help()) and
             not (yield bitcoind.rpc_getinfo())['testnet']
         ))
 SUBSIDY_FUNC = lambda height: 1*256 >> (height + 1)//10256
 POW_FUNC = data.hash256
 BLOCK_PERIOD = 126 # s
 SYMBOL = '256'
-CONF_FILE_FUNC = lambda: os.path.join(os.path.join(os.environ['APPDATA'], 'anarchistsprime') if platform.system() == 'Windows' else os.path.expanduser('~/Library/Application Support/AnarchistsPrime/') if platform.system() == 'Darwin' else os.path.expanduser('~/.anarchistsprime'), 'anarchistsprime.conf')
+CONF_FILE_FUNC = lambda: os.path.join(os.path.join(os.environ['APPDATA'], '256coin') if platform.system() == 'Windows' else os.path.expanduser('~/Library/Application Support/256coin/') if platform.system() == 'Darwin' else os.path.expanduser('~/.256coin'), '256coin.conf')
 BLOCK_EXPLORER_URL_PREFIX = 'None'
 ADDRESS_EXPLORER_URL_PREFIX = 'None'
 TX_EXPLORER_URL_PREFIX = 'None'
